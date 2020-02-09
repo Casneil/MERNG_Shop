@@ -2,10 +2,20 @@ import React from "react";
 import { data } from "../utils/_Data";
 
 const Women = () => {
+  console.log(data);
+
   return (
     <div>
       <header>Women</header>
-      <div>{data.map(goods => console.log(goods))}</div>
+      {data.map((goods, index) => (
+        <div key={index}>
+          <img
+            style={{ width: 200, height: 140 }}
+            src={goods.women.image}
+            alt="women"
+          />
+        </div>
+      ))}
     </div>
   );
 };
