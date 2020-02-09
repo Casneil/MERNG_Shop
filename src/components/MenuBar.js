@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Menu, Icon } from "semantic-ui-react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const MenuBar = () => {
   const pathname = window.location.pathname;
@@ -13,6 +13,8 @@ const MenuBar = () => {
     <>
       <Menu pointing secondary className="container">
         <Menu.Item
+          as={Link}
+          to="/"
           name="home"
           active={activeItem === "home"}
           onClick={handleItemClick}
@@ -33,9 +35,14 @@ const MenuBar = () => {
             active={activeItem === "logout"}
             onClick={handleItemClick}
           />
-          <div>
-            <Icon name="shopping cart" size="large" />
-          </div>
+          <Menu.Item
+            as={Link}
+            to="/checkout"
+            name="checkout"
+            active={activeItem === "checkout"}
+          >
+            <Icon name="cart" size="big" color="teal" />
+          </Menu.Item>
         </Menu.Menu>
       </Menu>
     </>

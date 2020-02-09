@@ -2,6 +2,7 @@ import React from "react";
 import { Card, Icon, Image } from "semantic-ui-react";
 
 import { data } from "../utils/_Data";
+console.log(data);
 
 const Mens = () => {
   return (
