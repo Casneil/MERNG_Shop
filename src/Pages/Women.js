@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { data } from "../utils/_Data";
 import { useDispatch, useSelector } from "react-redux";
 import { useState, useEffect } from "react";
@@ -12,7 +13,7 @@ const Women = () => {
   return (
     <div>
       {data.map((goods, index) => (
-        <Card key={index}>
+        <Card key={index} as={Link} to="/department/women">
           <Card.Content>
             <Card.Header>Women</Card.Header>
           </Card.Content>

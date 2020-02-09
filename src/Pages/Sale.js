@@ -5,3 +5,5 @@ const Sale = () => {
 };
 
 export default Sale;
+
+// as={Link} to="/department/sale"
